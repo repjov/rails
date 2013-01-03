@@ -1,0 +1,18 @@
+default_menu:
+  home:
+    url:  "home_path"
+    text: "Home"
+  static:
+    url: "about_path"
+    text: "About Us"
+  users:
+    url: "users_path"
+    text: "Users"
+
+unlogged_user_menu:
+  signin:
+    url: "home_path"
+    text: "Sign In"
+  signup:
+    url: "home_path"
+    text: "Sign Up"

@@ -1,4 +1,18 @@
 FirstApp::Application.routes.draw do
+  get "static/index"
+  
+  get "home/index"
+
+  resources :users
+
+  #default controller
+  root :to => "home#index", :as => "home"
+
+  #static pages
+  match '/about' => 'static#about', :as => 'about'
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

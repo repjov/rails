@@ -5,8 +5,11 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
+  gem 'mysql2'
+  gem 'activerecord-mysql-adapter'
 end
 
 
@@ -18,9 +21,13 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
+
+#gem 'slim'
+#this gem needed to install slim template as the default template for scaffolding
+#in description they promised no needed gem 'slim' anymore from version 0.2.0, that is wht i commented aline above
+gem "slim-rails"
 
 gem 'jquery-rails'
 

@@ -1,0 +1,5 @@
+div class="nav-collapse collapse"
+  ul.nav
+    = render_menu APP_CONFIG["default_menu"]
+  ul class="nav pull-right"
+    = render_menu APP_CONFIG["unlogged_user_menu"]
