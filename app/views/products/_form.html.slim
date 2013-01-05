@@ -1,0 +1,25 @@
+= form_for @product, :html => { class: "" } do |f|
+  - if @product.errors.any?
+    #error_explanation
+      - @product.errors.full_messages.each do |message|
+          div class="alert alert-error"
+            = message
+
+  .control-group
+    = f.label :title, :class => "control-label"
+    .controls
+      = f.text_field :title, :class => "input-xlarge"
+  .control-group
+    = f.label :description, :class => "control-label"
+    .controls
+      = f.text_area :description, :size => "10x5", :class => "input-xlarge"
+  .control-group
+    = f.label :image_url, :class => "control-label"
+    .controls
+      = f.url_field :image_url, :class => "input-xlarge"
+  .control-group
+    = f.label :price, :class => "control-label"
+    .controls
+      = f.text_field :price, :class => "input-xlarge"
+
+  .actions = f.submit 'Save', :class => "btn btn-primary"

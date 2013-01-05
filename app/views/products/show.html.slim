@@ -1,0 +1,18 @@
+p#notice = notice
+ul.breadcrumb
+  li
+    = link_to 'Back to list', products_path
+    '| 
+    = link_to 'Edit', edit_product_path(@product)
+.row
+  div class="span3"
+    = image_tag @product.image_url, :class => "img-polaroid", :width => "140px"
+    p.price
+      | Price 
+      = number_to_currency @product.price
+  div class="span9"
+    h2 = @product.title
+    hr
+    p = @product.description
+
+

@@ -4,7 +4,7 @@ html lang="en"
     meta charset="utf-8"
     title = page_title
     = stylesheet_link_tag "application", :media => "all"
-    = javascript_include_tag "home"
+    
     = csrf_meta_tags
   body
     div class="navbar navbar-inverse navbar-fixed-top"
@@ -15,4 +15,7 @@ html lang="en"
               span.icon-bar
           = link_to "Project Name", home_path, :class => 'brand'
           = render "layouts/menu"
-      = yield
+    .container
+     = yield
+    / include javascript at footer for faster load of page 
+    = javascript_include_tag "frontend"

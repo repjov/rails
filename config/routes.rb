@@ -1,4 +1,13 @@
 FirstApp::Application.routes.draw do
+  resources :line_items
+
+
+  resources :carts
+
+
+  resources :products
+
+
   get "static/index"
   
   get "home/index"
@@ -10,7 +19,7 @@ FirstApp::Application.routes.draw do
 
   #static pages
   match '/about' => 'static#about', :as => 'about'
-
+  match '/contact' => 'static#contact', :as => 'contact'
 
 
   # The priority is based upon order of creation:

@@ -2,12 +2,15 @@ default_menu:
   home:
     url:  "home_path"
     text: "Home"
-  static:
+  about:
     url: "about_path"
     text: "About Us"
-  users:
-    url: "users_path"
-    text: "Users"
+  # users:
+  #   url: "users_path"
+  #   text: "Users"
+  contact:
+    url: "/contact"
+    text: "Contact Us"
 
 unlogged_user_menu:
   signin:

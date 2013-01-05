@@ -1,0 +1,8 @@
+ul.breadcrumb
+  li
+    = link_to 'Show', @product
+    '|
+    = link_to 'Back to list', products_path
+fieldset
+  legend New Product
+  == render 'form'

@@ -1,0 +1,28 @@
+h1 Listing products
+
+table class="table table-striped"
+  tr
+    th Title
+    th Description
+    th Image url
+    th Price
+    th
+    th
+    th
+
+  - @products.each do |product|
+    tr
+      td = product.title
+      td = product.description
+      td = image_tag product.image_url, :width => "50"
+      td = number_to_currency product.price
+      td
+        = link_to "#{ tag "i", :class => "icon-eye-open", :title => "Show #{ product.title }" }".html_safe, product 
+      td 
+        = link_to "#{ tag "i", :class => "icon-edit", :title => "Edit #{ product.title }" }".html_safe, edit_product_path(product)
+      td 
+        = link_to "#{ tag "i", :class => "icon-remove-sign", :title => "Remove #{ product.title }" }".html_safe, product, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'Add New Product', new_product_path, {class: "btn btn-primary"}
